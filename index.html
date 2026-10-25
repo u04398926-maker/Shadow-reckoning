@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHADOW RECKONING</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #080d0b;
+  color: white;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 25px 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, #050907 5%, #07100ddd 55%, #07100d88),
+    url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80")
+    center/cover;
+}
+
+nav {
+  position: absolute;
+  top: 25px;
+  left: 7%;
+  right: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #b9d7a4;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.tag {
+  color: #b6d69b;
+  letter-spacing: 5px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(42px, 9vw, 90px);
+  line-height: 0.98;
+  letter-spacing: -2px;
+  max-width: 750px;
+}
+
+h1 span {
+  color: #b6d69b;
+}
+
+.description {
+  max-width: 480px;
+  color: #c0c8c2;
+  line-height: 1.7;
+  margin: 25px 0;
+}
+
+.btn {
+  display: inline-block;
+  background: #b6d69b;
+  color: #101810;
+  text-decoration: none;
+  padding: 16px 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: white;
+}
+
+section {
+  padding: 75px 7%;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.story {
+  color: #b8c0ba;
+  line-height: 1.8;
+  max-width: 700px;
+}
+
+.missions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #111a15;
+  border: 1px solid #29382d;
+  padding: 25px;
+}
+
+.card h3 {
+  color: #b6d69b;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #aab5ac;
+  line-height: 1.6;
+}
+
+footer {
+  border-top: 1px solid #263329;
+  padding: 25px;
+  text-align: center;
+  color: #7d8c80;
+  font-size: 12px;
+}
+
+#notice {
+  color: #b6d69b;
+  margin-top: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero" id="home">
+  <nav>
+    <div class="logo">GXB STUDIOS</div>
+    <a href="#missions">MISSIONS ↘</a>
+  </nav>
+
+  <div class="tag">A MILITARY SURVIVAL EXPERIENCE</div>
+
+  <h1>SHADOW<br><span>RECKONING</span></h1>
+
+  <p class="description">
+    One squad. One mission. No way back.
+    Enter a world of military combat, secret operations
+    and dangerous discoveries. Your mission starts here.
+  </p>
+
+  <div>
+    <button class="btn" onclick="startGame()">LET'S GO →</button>
+    <p id="notice"></p>
+  </div>
+</div>
+
+<section id="story">
+  <h2>THE STORY</h2>
+  <p class="story">
+    A secret military operation takes a dangerous turn.
+    A hidden threat, a nuclear launch facility and an
+    isolated oil rig are connected by a mystery.
+    Discover the truth in SHADOW RECKONING.
+  </p>
+</section>
+
+<section id="missions">
+  <h2>YOUR OPERATIONS</h2>
+
+  <div class="missions">
+    <div class="card">
+      <h3>MISSION 01</h3>
+      <p>THE LOST ISLAND</p>
+      <p>Survive the crash and investigate the island.</p>
+    </div>
+
+    <div class="card">
+      <h3>MISSION 02</h3>
+      <p>MISSION PHOENIX</p>
+      <p>Uncover a secret nuclear launch facility.</p>
+    </div>
+
+    <div class="card">
+      <h3>MISSION 03</h3>
+      <p>THE OIL RIG</p>
+      <p>Enter the ocean facility and face the truth.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  SHADOW RECKONING © 2026 | GAMING X BRO STUDIOS
+</footer>
+
+<script>
+function startGame() {
+  document.getElementById("notice").textContent =
+    "MISSION CONTROL: GAME COMING SOON.";
+  document.getElementById("missions").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+</script>
+
+</body>
+</html>
